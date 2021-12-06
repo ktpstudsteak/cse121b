@@ -31,7 +31,7 @@ document.querySelector('#pic').src = "https://www.biography.com/.image/t_share/M
 
 // Step 1: declare and instantiate an array variable to hold your favorite foods
 
-let foods = ["brotien", " monster", " the tears of my enemies"];
+let foods = ["brotien", " monster", " sunflower seeds"];
 // Step 2: place the values of the favorite foods variable into the HTML file
 
 document.querySelector("#food").innerHTML = foods.toString();

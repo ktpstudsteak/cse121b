@@ -4,7 +4,25 @@
 
 // Step 1: Declare a new variable to hold information about yourself
 
+
+
 // Step 2: Inside of the object, add a property named name with a value of your name as a string
+Name = {
+    name: 'Kaden',
+    image: 'https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs.zkcdn.net%2FAdvertisers%2F157ffc0fdfa64e098ce3492e7ada09bc.png',   
+    favoriteFoods: ['bannana', 'cheetos', 'steak'],
+    hobbies: ['guitar', 'home', 'silly', 'potato'],
+    placesLived: [
+        {place: 'Arizona', length: '12 years'},
+        {place: 'Idaho', length: '1 year'}
+    ],
+
+
+
+};
+
+document.getElementById('name').value = Name.name();
+
 
 // Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
 
