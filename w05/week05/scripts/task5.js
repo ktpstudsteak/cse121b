@@ -72,7 +72,7 @@ document.getElementById('message2').innerText = message2_ElectricBoogaloo;
 arrgImAPirateArrayMateyArrrggghhh = [];
 
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
-// - Creates an HTML <article> element
+// - Creates an HTML <article> elementfff
 // - Creates an HTML <h3> element and add the temple's templeName property to it
 // - Creates an HTML <h4> element and add the temple's location property to it
 // - Creates an HTML <h4> element and add the temple's dedicated property to it
