@@ -103,7 +103,8 @@ fetch('https://byui-cse.github.io/cse121b-course/week05/temples.json')
         return response.json();
     })
     
-var jsonObj = await response.json();
+var jsonObj = await response.json(); 
+
 
 // Step 4: Add a .then() method to turn the returned string into a JavaScript object ( hint: .json() )
 
