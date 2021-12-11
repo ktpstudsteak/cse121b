@@ -72,15 +72,38 @@ document.getElementById('message2').innerText = message2_ElectricBoogaloo;
 arrgImAPirateArrayMateyArrrggghhh = [];
 
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
-// - Creates an HTML <article> elementfff
-// - Creates an HTML <h3> element and add the temple's templeName property to it
-// - Creates an HTML <h4> element and add the temple's location property to it
-// - Creates an HTML <h4> element and add the temple's dedicated property to it
-// - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
-// - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
-// - Appends the <article> element to the HTML element with an ID of temples
+function output(array) {
+    var divTemple = document.getElementById('temples');
+    var newArticle = document.createElement('article');
+    var newH3 = document.createElement('h3');
+    var newH4 = document.createElement('h4');
+    var newImg = document.createElement('img');
 
+    array.forEach(temple => {
+// - Creates an HTML <article> element
+        var tArticle = newArticle;
+// - Creates an HTML <h3> element and add the temple's templeName property to it
+        var h3Name = newH3;
+        
+// - Creates an HTML <h4> element and add the temple's location property to it
+        var h4Location = newH4;
+// - Creates an HTML <h4> element and add the temple's dedicated property to it
+        var h4Dedication = newH4;
+// - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
+        var templeImg = newImg;
+        temple.src
+// - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
+
+// - Appends the <article> element to the HTML element with an ID of temples
+    });
+}
 // Step 3: Using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'
+fetch('https://byui-cse.github.io/cse121b-course/week05/temples.json')
+    .then(function (response) {
+        return response.json();
+    })
+    
+var jsonObj = await response.json();
 
 // Step 4: Add a .then() method to turn the returned string into a JavaScript object ( hint: .json() )
 
