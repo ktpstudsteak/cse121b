@@ -5,17 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="player" id="player">
+    <div class="player">
         <img src ="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fbestanimations.com%2FMusic%2Fanimated-dj-playing.gif&f=1&nofb=1" id="mainPhoto" alt="Main Photo">
         <!-- If serious use this :3 
         https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F223661%2Fscreenshots%2F1718151%2Fplay-that-funky-music.gif&f=1&nofb=1
         -->
 
-        <audio id="audioPlayer">
-            <source id="source" src="songs/"
+        <audio id="player" >
+            <source id="source" >
+            Audio Not supported
         </audio>
+
+        <div id = "controls">
+            <p id="currentSong"></p>
+            <div class="controls_wrapper">
+                <span>&#9658;</span>
+                <span>&#10074;</span>
+            </div>
+            <p>Volume:</p>
+            <div class="volume">
+                <span>-</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+                <span>+</span>
+            </div>
+        </div>
+
+        <h2>My Songs: </h2>
+        <!-- 7 songs currently in folder. Write javascript to dynamically add:) -->
+        <div id="songList">
+            <ol id="songOrderedList">
+                <li>Green Day - American Idiot w_Lyrics (Clean).mp3</li>
+                <li>Green Day basket case lyrics.mp3</li>
+                <li>Green day-boulevard of broken dreams (clean) lyrics.wmv.mp3</li>
+                <li>My Chemical Romance - Welcome to the Black Parade</li>
+                <li>Nine Days - Absolutely (Story Of A Girl).mp3</li>
+                <li>The All-American Rejects - Gives You Hell (Full Narrative Version).mp3</li>
+                <li>The All-American Rejects - Move Along.mp3</li>
+            </ol>
+            <button onclick="test()">clickme</button>
+        </div>
     </div>
 </body>
 </html>
