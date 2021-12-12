@@ -9,15 +9,20 @@
 </head>
 <body>
     <div class="player">
-        <img src ="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fbestanimations.com%2FMusic%2Fanimated-dj-playing.gif&f=1&nofb=1" id="mainPhoto" alt="Main Photo"/>
+        <img src ="https://media4.giphy.com/media/L2Gy7delHD2lEg6zPg/giphy.gif?cid=6c09b9523819da4eb1df7d101809f9a5bc01d1e6475eb9e5&rid=giphy.gif&ct=s" id="mainPhoto" alt="Main Photo"/>
         <!-- If serious use this :3 
         https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F223661%2Fscreenshots%2F1718151%2Fplay-that-funky-music.gif&f=1&nofb=1
+
+        Silly one:
+        https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fbestanimations.com%2FMusic%2Fanimated-dj-playing.gif&f=1&nofb=1
         -->
 
-        <audio id="player">
+        <audio id="player" ontimeupdate="updateProgress()">
             <source id="source" />
             Audio not supported
           </audio>
+
+          <progress id="progress" value="0" max="100"></progress>
 
         <div id = "controls">
             <p id="currentSong"></p>
@@ -36,10 +41,10 @@
         <h2>My Songs: </h2>
         <!-- 7 songs currently in folder. Write javascript to dynamically add:) -->
         <div id="songList">
-            <p>Music: <a href="http://www.limewireofficial.com/">Totally obtained legitimately</a></p>
-            
+
         </div>
     </div>
     <script src="script.js"></script>
+    <p>Music: <a href="http://www.limewireofficial.com/">Totally Obtained Legitimately Here</a></p>
 </body>
 </html> 

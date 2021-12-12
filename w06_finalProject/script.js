@@ -1,5 +1,4 @@
 const songs = [
-    // "American Idiot w_Lyrics (Clean).mp3",
     "Green Day basket case lyrics.mp3",
     "Green day-boulevard of broken dreams (clean) lyrics.wmv.mp3",
     "My Chemical Romance - Welcome to the Black Parade.mp3",
@@ -32,15 +31,21 @@ function createSongList(){
 const songList = document.getElementById('songList');
 songList.appendChild(createSongList());
 
-songList.onclick = function(e) {
+const links = document.querySelectorAll('li');
+for (const link of links) {
+    link.addEventListener("click", setSong);
+}
+
+function setSong(e) {
+    document.querySelector('#mainPhoto').classList.remove('pulse');
     const source = document.getElementById('source');
     source.src = "songs/"+ e.target.innerText;
 
     document.querySelector('#currentSong').innerText = `Now Playing: ${e.target.innerText}`;
-    
-   
+
     player.load();
     player.play();
+    document.querySelector('#mainPhoto').classList.add('pulse');
 }
 
 function playAudio() {
@@ -57,4 +62,13 @@ const slider = document.getElementById('volumeSlider');
 slider.oninput = function(e) {
     const volume = e.target.value;
     player.volume = volume;
+}
+
+function updateProgress() {
+    if (player.currentTime > 0 ) {
+        const progressBar = document.getElementById('progress');
+        progressBar.value = (player.currentTime / player.duration) * 100;
+    }
+    // console.log(player.duration);
+    
 }
