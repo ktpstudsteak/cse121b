@@ -1,12 +1,15 @@
 const songs = [
-    "American Idiot w_Lyrics (Clean).mp3",
+    // "American Idiot w_Lyrics (Clean).mp3",
     "Green Day basket case lyrics.mp3",
     "Green day-boulevard of broken dreams (clean) lyrics.wmv.mp3",
     "My Chemical Romance - Welcome to the Black Parade.mp3",
     "Nine Days - Absolutely (Story Of A Girl).mp3",
     "The All-American Rejects - Gives You Hell (Full Narrative Version).mp3",
-    "The All-American Rejects - Move Along.mp3"
+    "The All-American Rejects - Move Along.mp3",
+    "Through The Fire and The Flames.m4a"
 ];
+
+const player = document.getElementById('player');
 
 function createSongList(){
     const list = document.createElement("ol");
@@ -35,7 +38,23 @@ songList.onclick = function(e) {
 
     document.querySelector('#currentSong').innerText = `Now Playing: ${e.target.innerText}`;
     
-    const player = document.getElementById('player');
+   
     player.load();
     player.play();
+}
+
+function playAudio() {
+    if (player.readyState) {
+        player.play();
+    }
+}
+
+function pauseAudio() {
+    player.pause();
+}
+
+const slider = document.getElementById('volumeSlider');
+slider.oninput = function(e) {
+    const volume = e.target.value;
+    player.volume = volume;
 }
